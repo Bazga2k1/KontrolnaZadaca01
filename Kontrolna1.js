@@ -74,6 +74,35 @@ const somePeople = {
 //INPUT: [3, 4, 5, 8, 11]
 //OUTPUT: [3, 5, 11]
 
+function vratiProste(arr){
+    let novi = [];
+    let flag = 0;
+
+    for(const broj of arr) {
+        for(let i = 1; i < broj; i++){
+            if(broj % i){
+                flag = 1;
+                break;
+            }
+
+            if(flag){
+                flag = 0;
+                break;
+            } else{
+                for(broj1 in novi){
+                    if(broj1 == undefined){
+                        novi = broj1;
+                    }
+                }
+            }
+        }
+    }
+
+    console.log(novi);
+}
+
+let brojevi = [3, 4, 5, 8, 11];
+//vratiProste(brojevi);
 
 
 //ZAMJENA ZA 5 (4 BODA)
@@ -83,6 +112,15 @@ const somePeople = {
 
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve dogadaje koji su se dogodili prije od vrijednosti iz ulaznog parametra
+
+function starijiDogadjaj(obj, god){
+    for (const event in obj) {
+        if(event.Year < god){
+            console.log(event.eventName);
+        }
+    }
+}
+
 const someEvents = [
     {
         eventName: "Izasla je Java",
@@ -105,5 +143,7 @@ const someEvents = [
         eventYear: 1995,
     },
 ];
+
+starijiDogadjaj(someEvents, 1992);
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
