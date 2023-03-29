@@ -11,6 +11,7 @@ function ispisiParne100(){
 }
 
 ispisiParne100();
+console.log();
 
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u dan u tjednu. Za neispravan unos ispisi prikladnu poruku.
@@ -39,6 +40,7 @@ let dan5 = 5;
 provjeriDan(dan5);
 let dan6 = 6;
 provjeriDan(dan6);
+console.log();
 
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere ne uzimajuci u obzir prazna mjesta (eng. whitespaces)
@@ -63,18 +65,23 @@ function okreniString(rijec){
 
 let zadani = "Pisanje zadataka nije jednostavan posao"
 okreniString(zadani);
+console.log();
 
 //4 (4 BODA)
 //Napisi funkciju koja vraca najkraci kljuc u danom objektu
 
 function najkraciKljuc(ljudi){
     let najkracaDuljina = 1000;
+    let najkraci;
 
     for (const key in ljudi) {
-        if(key.length < najkracaDuljina){
-            
+        if(ljudi[key].length < najkracaDuljina){
+            najkracaDuljina = ljudi[key].lenght;
+            najkraci = ljudi[key];
         }
     }
+
+    console.log(najkraci);
 }
 
 const somePeople = {
@@ -87,6 +94,7 @@ const somePeople = {
 }
 
 najkraciKljuc(somePeople);
+console.log();
 
 //INPUT: somePeople
 //OUTPUT: "Ada"
@@ -113,7 +121,8 @@ function vratiProste(arr){
             } else{
                 for(broj1 in novi){
                     if(broj1 == undefined){
-                        novi = broj1;
+                        broj1 = broj1;
+                        break;
                     }
                 }
             }
@@ -125,6 +134,7 @@ function vratiProste(arr){
 
 let brojevi = [3, 4, 5, 8, 11];
 vratiProste(brojevi);
+console.log();
 
 
 //ZAMJENA ZA 5 (4 BODA)
@@ -167,6 +177,7 @@ const someEvents = [
 ];
 
 starijiDogadjaj(someEvents, 1992);
+console.log();
 
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
