@@ -113,10 +113,10 @@ let brojevi = [3, 4, 5, 8, 11];
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve dogadaje koji su se dogodili prije od vrijednosti iz ulaznog parametra
 
-function starijiDogadjaj(obj, god){
-    for (const event in obj) {
-        if(event.Year < god){
-            console.log(event.eventName);
+function starijiDogadjaj(eventi, god){
+    for (const dogdjaj in eventi) {
+        if(eventi[dogdjaj].eventYear < god){
+            
         }
     }
 }
