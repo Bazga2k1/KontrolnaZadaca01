@@ -10,7 +10,7 @@ function ispisiParne100(){
     }
 }
 
-//ispisiParne100();
+ispisiParne100();
 
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u dan u tjednu. Za neispravan unos ispisi prikladnu poruku.
@@ -27,10 +27,18 @@ function provjeriDan(danUtjednu){
     }
 }
 
-/*
-let dan = 1;
-provjeriDan(dan);
-*/
+let dan1 = 1;
+provjeriDan(dan1);
+let dan2 = 2;
+provjeriDan(dan2);
+let dan3 = 3;
+provjeriDan(dan3);
+let dan4 = 4;
+provjeriDan(dan4);
+let dan5 = 5;
+provjeriDan(dan5);
+let dan6 = 6;
+provjeriDan(dan6);
 
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere ne uzimajuci u obzir prazna mjesta (eng. whitespaces)
@@ -54,10 +62,21 @@ function okreniString(rijec){
 }
 
 let zadani = "Pisanje zadataka nije jednostavan posao"
-//okreniString(zadani);
+okreniString(zadani);
 
 //4 (4 BODA)
 //Napisi funkciju koja vraca najkraci kljuc u danom objektu
+
+function najkraciKljuc(ljudi){
+    let najkracaDuljina = 1000;
+
+    for (const key in ljudi) {
+        if(key.length < najkracaDuljina){
+            
+        }
+    }
+}
+
 const somePeople = {
     Donald: "Knuth",
     Bjarne: "Stroustrup",
@@ -66,6 +85,9 @@ const somePeople = {
     Martin: "Fowler",
     Erich: "Gamma"
 }
+
+najkraciKljuc(somePeople);
+
 //INPUT: somePeople
 //OUTPUT: "Ada"
 
@@ -79,8 +101,8 @@ function vratiProste(arr){
     let flag = 0;
 
     for(const broj of arr) {
-        for(let i = 1; i < broj; i++){
-            if(broj % i){
+        for(let i = 1; i < broj[i]; i++){
+            if(broj[i] % i){
                 flag = 1;
                 break;
             }
@@ -102,7 +124,7 @@ function vratiProste(arr){
 }
 
 let brojevi = [3, 4, 5, 8, 11];
-//vratiProste(brojevi);
+vratiProste(brojevi);
 
 
 //ZAMJENA ZA 5 (4 BODA)
@@ -116,7 +138,7 @@ let brojevi = [3, 4, 5, 8, 11];
 function starijiDogadjaj(eventi, god){
     for (const dogdjaj in eventi) {
         if(eventi[dogdjaj].eventYear < god){
-            
+            console.log(eventi[dogdjaj]);
         }
     }
 }
@@ -145,5 +167,6 @@ const someEvents = [
 ];
 
 starijiDogadjaj(someEvents, 1992);
+
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
